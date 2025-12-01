@@ -5,6 +5,27 @@
 	<groupId>treinamento_automacao</groupId>
 	<artifactId>treinamento_automacao</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<!-- Configuração para compilar com Java 21 (LTS) -->
+	<properties>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+		<maven.compiler.release>21</maven.compiler.release>
+	</properties>
+
+	<build>
+		<plugins>
+			<!-- Plugin do compilador configurado para Java 21 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<release>21</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencies>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
